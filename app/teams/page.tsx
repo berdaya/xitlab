@@ -6,26 +6,26 @@ import { Card } from "../components/card";
 
 const socials = [
 	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/xit_lab",
-		label: "Twitter",
-		handle: "@xit_lab",
+		icon: <Mail size={20} />,
+		href: "mailto:f.hakim.ihsan@gmail.com",
+		label: "System Engineer",
+		handle: "Hakim Ihsan",
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:dev@berdaya.ai",
-		label: "Email",
-		handle: "dev@berdaya.ai",
+		href: "mailto:adrinant2000@gmail.com",
+		label: "Tester",
+		handle: "Adrinantoko",
 	},
 	{
-		icon: <Github size={20} />,
-		href: "https://github.com/berdaya",
-		label: "Github",
-		handle: "Berdaya",
+		icon: <Mail size={20} />,
+		href: "mailto:adi.stywr@gmail.com",
+		label: "Full-Stack Engineer",
+		handle: "Setiya Warman",
 	},
 ];
 
-export default function Example() {
+export default function TeamsPage() {
 	return (
 		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<Navigation />
