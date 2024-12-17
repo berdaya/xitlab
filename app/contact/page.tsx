@@ -1,5 +1,5 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -8,20 +8,20 @@ const socials = [
 	{
 		icon: <Twitter size={20} />,
 		href: "https://twitter.com/xit_lab",
-		label: "Twitter",
-		handle: "@xit_lab",
+		label: "xit_lab",
+		handle: "Twitter",
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:dev@berdaya.ai",
-		label: "Email",
-		handle: "dev@berdaya.ai",
+		href: "mailto:xitlaboratory@gmail.com",
+		label: "xitlaboratory@gmail.com",
+		handle: "Email Us",
 	},
 	{
-		icon: <Github size={20} />,
-		href: "https://github.com/berdaya",
-		label: "Github",
-		handle: "Berdaya",
+		icon: <Linkedin size={20} />,
+		href: "https://www.linkedin.com/company/105850051",
+		label: "XiTLab",
+		handle: "LinkedIn",
 	},
 ];
 

@@ -1,27 +1,32 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
+import { ASSETS } from "@/libs/assets";
+import Image from "next/image";
 
 const socials = [
 	{
-		icon: <Mail size={20} />,
-		href: "mailto:f.hakim.ihsan@gmail.com",
+		icon: <Linkedin size={20} />,
+		href: "https://www.linkedin.com/in/fadllulhakim/",
 		label: "System Engineer",
 		handle: "Hakim Ihsan",
+		photo: ASSETS.photo1.src,
 	},
 	{
-		icon: <Mail size={20} />,
-		href: "mailto:adrinant2000@gmail.com",
+		icon: <Linkedin size={20} />,
+		href: "https://www.linkedin.com/in/adrinant/",
 		label: "Tester",
 		handle: "Adrinantoko",
+		photo: ASSETS.photo2.src,
 	},
 	{
-		icon: <Mail size={20} />,
-		href: "mailto:adi.stywr@gmail.com",
+		icon: <Linkedin size={20} />,
+		href: "https://www.linkedin.com/in/adi-setiya-warman/",
 		label: "Full-Stack Engineer",
 		handle: "Setiya Warman",
+		photo: ASSETS.photo3.src,
 	},
 ];
 
@@ -51,6 +56,9 @@ export default function TeamsPage() {
 									</span>
 									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 										{s.label}
+									</span>
+									<span className="hidden lg:block mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+    									<Image src={s.photo} alt={s.handle} width={150} height={150} />
 									</span>
 								</div>
 							</Link>
