@@ -1,42 +1,265 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.7;
+  color: #2c2c2c;
+  background: #ffffff;
+  min-height: 100vh;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  background: #ffffff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.03);
+  min-height: 100vh;
 }
 
-a {
-  color: inherit;
+header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.problem-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 40px auto 20px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 50px;
+  text-align: center;
+  font-style: italic;
+}
+
+.problem-statement {
+  max-width: 650px;
+  margin: 0 auto 20px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* Waitlist Form Styles */
+.waitlist-section {
+  text-align: center;
+  margin: 80px 0;
+  padding: 50px 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+}
+
+.waitlist-section h2 {
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.waitlist-section p {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.waitlist-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.waitlist-input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #e8e8e8;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.waitlist-input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.waitlist-button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.waitlist-button:hover {
+  background-color: #333;
+}
+
+.waitlist-button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-message.success {
+  color: #28a745;
+}
+
+.form-message.error {
+  color: #dc3545;
+}
+
+
+.experiments {
+  margin-top: 80px;
+}
+
+.experiments h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.experiment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.experiment-card {
+  background: #ffffff;
+  border: 2px solid #e8e8e8;
+  padding: 30px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
   text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.experiment-card:hover {
+  border-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.experiment-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+.experiment-description {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.launch-indicator {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.8rem;
+  color: #333;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translateX(-3px);
+}
+
+.experiment-card:hover .launch-indicator {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+  padding-top: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: #888;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .experiment-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+      padding: 40px 15px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .tagline {
+      font-size: 1.1rem;
+  }
+
+  .experiment-card {
+      padding: 25px;
+  }
+  
+  .waitlist-form {
+      flex-direction: column;
   }
 }
