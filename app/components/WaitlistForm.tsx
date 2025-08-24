@@ -3,13 +3,18 @@
 import { useState } from 'react';
 import { addToWaitlist } from '@/app/actions';
 
-const initialState = {
+interface FormState {
+  message: string;
+  status: string;
+}
+
+const initialState: FormState = {
   message: '',
   status: '',
 };
 
 export function WaitlistForm() {
-  const [state, setState] = useState(initialState);
+  const [state, setState] = useState<FormState>(initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -23,7 +28,7 @@ export function WaitlistForm() {
     try {
       const result = await addToWaitlist(null, formData);
       setState(result);
-    } catch (error) {
+    } catch {
       setState({
         message: 'An unexpected error occurred. Please try again later.',
         status: 'error'

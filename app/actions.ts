@@ -3,7 +3,12 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { JWT } from 'google-auth-library';
 
-export async function addToWaitlist(prevState: any, formData: FormData) {
+interface FormState {
+  message: string;
+  status: string;
+}
+
+export async function addToWaitlist(prevState: FormState | null, formData: FormData): Promise<FormState> {
   const email = formData.get('email');
 
   // Basic email validation

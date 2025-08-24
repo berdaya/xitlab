@@ -13,7 +13,7 @@ export default function Home() {
 
 That kind of teacher is rare. And no matter how passionate they are, they simply cannot personally tutor all 8 billion of us.</p>
             
-            <p style={{marginTop: '16px'}}>Now, AI has promised to fill this gap. And yes, today’s tools can generate answers. But they don’t teach, they still fall short of becoming <em>tutor agents people truly want.</em> They don’t win our trust. They stumble on pedagogy. And most importantly, they’re missing that spark of <em>character</em> that makes learning feel human.</p>
+            <p style={{marginTop: '16px'}}>Now, AI has promised to fill this gap. And yes, today&apos;s tools can generate answers. But they don&apos;t teach, they still fall short of becoming <em>tutor agents people truly want.</em> They don&apos;t win our trust. They stumble on pedagogy. And most importantly, they&apos;re missing that spark of <em>character</em> that makes learning feel human.</p>
         </div>
       </header>
 
@@ -41,14 +41,14 @@ That kind of teacher is rare. And no matter how passionate they are, they simply
               <a href="https://berdaya.ai" className="experiment-card" target="_blank" rel="noopener noreferrer">
                   <h3 className="experiment-title">Berdaya.ai<span className="launch-indicator">→</span></h3>
                   <p className="experiment-description">
-                      A curated repository of summaries from the world's leading AI speakers and thought leaders.
+                      A curated repository of summaries from the world&apos;s leading AI speakers and thought leaders.
                   </p>
               </a>
           </div>
       </section>
 
       <footer>
-          <p>XITLab — Exploring the future of educational technology</p>
+          <p>XITLab – Building intelligent personified technologies that collaborate with people to help them learn, thrive, and flourish.</p>
       </footer>
     </div>
   );
